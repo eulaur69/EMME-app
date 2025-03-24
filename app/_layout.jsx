@@ -1,57 +1,598 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { ScrollView, View, Text, Image,TouchableOpacity } from 'react-native';
-import AntDesign from '@expo/vector-icons/AntDesign';
 import { useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-const HomeStack = () => {
+const DetailsScreen1 = () => {
+  const navigation = useNavigation();
   return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{ title: 'Home', 
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="Details"
-        component={DetailsScreen}
-        options={{
-          headerShown: false,
-          title: 'Details',
-        }}
-      />
-    </Stack.Navigator>
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson1_1.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 1.1: Earth’s Building Materials</Text>
+    <Text style={styles.description}>Learn about Earth's crust, minerals, rocks, and the rock cycle.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details1_1')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson1_2.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 1.2: Plate Tectonics and Mountain Building</Text>
+    <Text style={styles.description}>Study how tectonic plates move, form mountains, and shape Earth's surface.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details1_2')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson1_3.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 1.3: Volcanoes and Earthquakes</Text>
+    <Text style={styles.description}>Investigate the causes and effects of volcanic eruptions and earthquakes.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details1_3')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson1_4.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 1.4: Deep Time and Fossils</Text>
+    <Text style={styles.description}>Explore Earth's 4.5-billion-year history and the significance of fossils.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details1_4')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+    </View>
+    </ScrollView>
   );
 };
 
-const DetailsScreen = () => {
+const DetailsScreen1_1 = () => {
   const navigation = useNavigation();
   return (
-    <View style={{ flex: 1, position: 'relative',backgroundColor: '#fff'}}>
-    <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-    <AntDesign name="arrowleft" size={24} color="black" style={{marginLeft: 10, marginTop: 10,}} />
-    </TouchableOpacity>
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
     <View style={styles.container}>
 
-      <Text style={styles.lessonTitle}>Lesson 1.1: Earth’s Building Materials</Text>
-      <Text style={styles.lessonDescription}>Learn about Earth's crust, minerals, rocks, and the rock cycle.</Text>
-
-      <Text style={styles.lessonTitle}>Lesson 1.2: Plate Tectonics and Mountain Building</Text>
-      <Text style={styles.lessonDescription}>Study how tectonic plates move, form mountains, and shape Earth's surface.</Text>
-
-      <Text style={styles.lessonTitle}>Lesson 1.3: Volcanoes and Earthquakes</Text>
-      <Text style={styles.lessonDescription}>Investigate the causes and effects of volcanic eruptions and earthquakes.</Text>
-
-      <Text style={styles.lessonTitle}>Lesson 1.4: Deep Time and Fossils</Text>
-      <Text style={styles.lessonDescription}>Explore Earth's 4.5-billion-year history and the significance of fossils.</Text>
+    
 
     </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen1_2 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
     </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen1_3 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen1_4 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen2 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson2_1.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 2.1: Nature Journaling and Observation</Text>
+    <Text style={styles.description}>Develop observation skills by documenting plants, animals, and ecosystems in nature.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details2_1')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson2_2.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 2.2: Investigating Soil and Water</Text>
+    <Text style={styles.description}>Study soil composition, water quality, and their importance in ecosystems.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details2_2')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson2_3.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 2.3: Nature-Based Art and Creativity</Text>
+    <Text style={styles.description}>Create art using natural materials and explore the connection between art and nature.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details2_3')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson2_4.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 2.4: Culinary Adventures with Backyard Bounty</Text>
+    <Text style={styles.description}>Identify and cook with edible plants, learning about sustainable food practices.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details2_4')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson2_5.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 2.5: Learning about Sustainable Gardening Practices and Permaculture</Text>
+    <Text style={styles.description}>Discover sustainable gardening techniques and permaculture principles.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details2_5')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+    </View>
+
+    </ScrollView>
+  );
+};
+
+const DetailsScreen2_1 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen2_2 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen2_3 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen2_4 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen2_5 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen3 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson3_1.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 3.1: Memory of the Earth / Digne Declaration</Text>
+    <Text style={styles.description}>Learn about geological heritage and the global effort to protect it.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details3_1')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson3_2.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 3.2: Geological Heritage – The Best Memories of the Earth / Management and Governance</Text>
+    <Text style={styles.description}>Explore how geological sites are managed and protected.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details3_2')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson3_3.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 3.3: Geoparks – Unique Places of Earth’s and Human Memories to Be Discovered</Text>
+    <Text style={styles.description}>Discover UNESCO Global Geoparks and their role in preserving Earth's history.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details3_3')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson3_4.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 3.4: Meet Your Geoparks – Examples of Geoparks from Romania, Portugal, Slovakia, and Croatia</Text>
+    <Text style={styles.description}>Explore European Geoparks and their geological, cultural, and ecological significance.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details3_4')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+    </View>
+
+    </ScrollView>
+  );
+};
+
+const DetailsScreen3_1 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen3_2 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen3_3 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen3_4 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen4 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson4_1.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 4.1: The Dialogue Between Man and Earth – Local Raw Materials and Resources</Text>
+    <Text style={styles.description}>Examine how humans use local resources like minerals, soil, and water.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details4_1')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson4_2.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 4.2: Stone-Made Objects – Geological, Anthropological, and Socio-Economic Stories of Rocks and Minerals</Text>
+    <Text style={styles.description}>Study the cultural and economic significance of stone-made objects.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details4_2')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson4_3.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 4.3: Local Mythology Related to Earth Processes</Text>
+    <Text style={styles.description}>Explore myths that explain natural phenomena like earthquakes and volcanoes.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details4_3')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson4_4.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 4.4: Stone-Made Objects in Local Archaeology and Architecture</Text>
+    <Text style={styles.description}>Investigate the role of stone in ancient and modern structures.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details4_4')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+    </View>
+
+    </ScrollView>
+  );
+};
+
+const DetailsScreen4_1 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen4_2 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen4_3 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen4_4 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen5 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson5_1.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 5.1: Local Geomorphology – Introducing Landforms and Landscapes</Text>
+    <Text style={styles.description}>Learn about landforms like mountains, valleys, and rivers, and how they form.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details5_1')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/lesson5_2.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Lesson 5.2: Mapping the 4D Environment – 2D, 3D, and 4D Representations of Landforms and Objects</Text>
+    <Text style={styles.description}>Explore mapping techniques to visualize landforms and their changes over time.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details5_2')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+    </View>
+
+    </ScrollView>
+  );
+};
+
+const DetailsScreen5_1 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
+  );
+};
+
+const DetailsScreen5_2 = () => {
+  const navigation = useNavigation();
+  return (
+    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
+    
+    <View style={styles.container}>
+
+    
+
+    </View>
+    </ScrollView>
   );
 };
 
@@ -59,6 +600,7 @@ const HomeScreen = () => {
   const navigation = useNavigation();
   return(
   <ScrollView style={styles.container}>
+
   <View style={styles.card}>
     <Image 
     source={ require('../assets/images/unit1.jpg') } 
@@ -68,17 +610,68 @@ const HomeScreen = () => {
     <Text style={styles.title}>Geology and Paleontology</Text>
     <Text style={styles.description}>Explore the Earth's geological processes, from rock formation to plate tectonics, and uncover the history of life through fossils and deep time.</Text>
   </View>
-  <TouchableOpacity onPress={() => navigation.navigate('Details')} style={styles.button}>
+  <TouchableOpacity onPress={() => navigation.navigate('Details1')} style={styles.button}>
       <Text style={styles.buttonText}>Show More</Text>
   </TouchableOpacity>
   </View>
-  </ScrollView>
-  )
-};
-const Page2 = () => {
-  return(
-  <ScrollView style={styles.container}>
-    
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/unit2.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Ecology and Biodiversity</Text>
+    <Text style={styles.description}>Dive into the natural world, learning about ecosystems, biodiversity, and sustainable practices through hands-on activities and creative exploration.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details2')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/unit3.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Environmental Stewardship</Text>
+    <Text style={styles.description}>Understand the importance of preserving Earth's geological heritage and the role of geoparks in conservation, education, and sustainable development.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details3')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/unit4.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Local History and Culture</Text>
+    <Text style={styles.description}>Investigate how local resources, myths, and stone-made objects shape cultural identity and historical development.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details4')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={styles.card}>
+    <Image 
+    source={ require('../assets/images/unit5.jpg') } 
+    style={styles.image}
+  />
+  <View style={styles.infoSection}>
+    <Text style={styles.title}>Geomorphology</Text>
+    <Text style={styles.description}>Study the formation of landforms, their evolution over time, and how they influence human activities and ecosystems.</Text>
+  </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details5')} style={styles.button}>
+      <Text style={styles.buttonText}>Show More</Text>
+  </TouchableOpacity>
+  </View>
+
+  <View style={{paddingBottom:'10'}}></View>
   </ScrollView>
   )
 };
@@ -100,64 +693,257 @@ const HeaderText = () => {
 
 const TabNavigator = () => {
   return(
-  <Tabs.Navigator
+  <Stack.Navigator
     screenOptions={{
       headerShown: true,
-      tabBarInactiveBackgroundColor: '#fff',
-      tabBarActiveTintColor: '#fff',
-      tabBarInactiveTintColor: 'black',
-      tabBarActiveBackgroundColor: 'green',
-      tabBarStyle: {
-        backgroundColor: '#fff',
-        height: 50,
-        borderTopWidth: 0,
-        paddingBottom: 0,
-      },
       headerStyle: {
         backgroundColor: '#fff',
-        elevation: 0,
-        borderBottomWidth: 0,
-        paddingTop: 10,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2,
-        shadowRadius: 3,
-        elevation: 5,
+  elevation: 0,
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.2,
+  shadowRadius: 3,
+  elevation: 5,
       },
-      headerTintColor: '#fff',
+      headerTintColor: 'black',
     }}
   >
-    <Tabs.Screen
+    <Stack.Screen
       name="home"
-      component={HomeStack}
+      component={HomeScreen}
       options={{
         headerTitle: () => <HeaderText />,
         headerTitleAlign: 'center',
         title: "Home",
-        tabBarIcon: ({ color }) => <AntDesign size={28} name="home" color={color} />,
+        headerTintColor: '#fff',
       }}
     />
-    <Tabs.Screen
-      name="page2"
-      component={Page2}
-      options={{
-        headerTitle: () => <HeaderText />,
+    <Stack.Screen
+        name="Details1"
+        component={DetailsScreen1}
+        options={{
+          headerTitle: () => <HeaderText />,
         headerTitleAlign: 'center',
-        title: "Page2",
-        tabBarIcon: ({ color }) => <AntDesign size={28} name="setting" color={color} />,
-      }}
-    />
-  </Tabs.Navigator>
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details1_1"
+        component={DetailsScreen1_1}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details1_2"
+        component={DetailsScreen1_2}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details1_3"
+        component={DetailsScreen1_3}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details1_4"
+        component={DetailsScreen1_4}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details2"
+        component={DetailsScreen2}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details2_1"
+        component={DetailsScreen2_1}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details2_2"
+        component={DetailsScreen2_2}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details2_3"
+        component={DetailsScreen2_3}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details2_4"
+        component={DetailsScreen2_4}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details2_5"
+        component={DetailsScreen2_5}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details3"
+        component={DetailsScreen3}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details3_1"
+        component={DetailsScreen3_1}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details3_2"
+        component={DetailsScreen3_2}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details3_3"
+        component={DetailsScreen3_3}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details3_4"
+        component={DetailsScreen3_4}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details4"
+        component={DetailsScreen4}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details4_1"
+        component={DetailsScreen4_1}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details4_2"
+        component={DetailsScreen4_2}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details4_3"
+        component={DetailsScreen4_3}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details4_4"
+        component={DetailsScreen4_4}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details5"
+        component={DetailsScreen5}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details5_1"
+        component={DetailsScreen5_1}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+      <Stack.Screen
+        name="Details5_2"
+        component={DetailsScreen5_2}
+        options={{
+          headerTitle: () => <HeaderText />,
+        headerTitleAlign: 'center',
+          title: 'Details',
+        }}
+      />
+  </Stack.Navigator>
   )
 };
-
 const styles = {
-  container: { 
-    flex: 1,
+  container: {
     backgroundColor: '#fff',
     padding: 20,
   },
   card: {
+    
     backgroundColor: '#fff',
     borderRadius: 16,
     overflow: 'hidden',
@@ -211,5 +997,4 @@ const styles = {
     marginLeft: 25,
   },
 };
-
 export default TabNavigator;
