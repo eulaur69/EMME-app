@@ -1,6 +1,10 @@
-import { ScrollView, View, Text, Image,TouchableOpacity } from 'react-native';
+import React, { useState, useEffect, useRef  } from 'react';
+import { ScrollView, View, Text, Image,TouchableOpacity, Dimensions, StyleSheet,ActivityIndicator } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { WebView } from 'react-native-webview';
+import { Asset } from 'expo-asset';
+
 
 const Stack = createStackNavigator();
 
@@ -73,58 +77,146 @@ const DetailsScreen1 = () => {
 };
 
 const DetailsScreen1_1 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1YT0oGuyMQ_xlVCd-tde8q9Khbqn5ZNAn/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
 const DetailsScreen1_2 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const asset = Asset.fromModule(require('../assets/pdfs/lesson1_2.pdf'));
+        await asset.downloadAsync();
+        setPdfUri(asset.uri || asset.localUri);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  }, []);
+
+  if (!pdfUri) {
+    return (
+      <View style={styles.loader}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </View>
+    );
+  }
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1mqwE0UaZwB2ojkIhjOWcttCuRrdWeUal/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
 const DetailsScreen1_3 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const asset = Asset.fromModule(require('../assets/pdfs/lesson1_2.pdf'));
+        await asset.downloadAsync();
+        setPdfUri(asset.uri || asset.localUri);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  }, []);
+
+  if (!pdfUri) {
+    return (
+      <View style={styles.loader}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </View>
+    );
+  }
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1pe4OjTSzVgNlekUssONimc4LEY8zNlLf/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
 const DetailsScreen1_4 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const asset = Asset.fromModule(require('../assets/pdfs/lesson1_2.pdf'));
+        await asset.downloadAsync();
+        setPdfUri(asset.uri || asset.localUri);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  }, []);
+
+  if (!pdfUri) {
+    return (
+      <View style={styles.loader}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </View>
+    );
+  }
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1xKBmNJ4wHqeDqGuSnJVlvvEDqHLFw6In/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
@@ -941,6 +1033,7 @@ const styles = {
   container: {
     backgroundColor: '#fff',
     padding: 20,
+    flex: 1
   },
   card: {
     
