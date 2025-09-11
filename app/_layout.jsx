@@ -100,26 +100,6 @@ const DetailsScreen1_1 = () => {
 const DetailsScreen1_2 = () => {
   const [pdfUri, setPdfUri] = useState(null);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const asset = Asset.fromModule(require('../assets/pdfs/lesson1_2.pdf'));
-        await asset.downloadAsync();
-        setPdfUri(asset.uri || asset.localUri);
-      } catch (e) {
-        console.error(e);
-      }
-    })();
-  }, []);
-
-  if (!pdfUri) {
-    return (
-      <View style={styles.loader}>
-        <ActivityIndicator size="large" color="#0000ff" />
-      </View>
-    );
-  }
-
   const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
 
   const googleDocsUrl = `https://drive.google.com/file/d/1mqwE0UaZwB2ojkIhjOWcttCuRrdWeUal/view?usp=drive_link`;
@@ -141,26 +121,6 @@ const DetailsScreen1_2 = () => {
 const DetailsScreen1_3 = () => {
   const [pdfUri, setPdfUri] = useState(null);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const asset = Asset.fromModule(require('../assets/pdfs/lesson1_2.pdf'));
-        await asset.downloadAsync();
-        setPdfUri(asset.uri || asset.localUri);
-      } catch (e) {
-        console.error(e);
-      }
-    })();
-  }, []);
-
-  if (!pdfUri) {
-    return (
-      <View style={styles.loader}>
-        <ActivityIndicator size="large" color="#0000ff" />
-      </View>
-    );
-  }
-
   const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
 
   const googleDocsUrl = `https://drive.google.com/file/d/1pe4OjTSzVgNlekUssONimc4LEY8zNlLf/view?usp=drive_link`;
@@ -181,26 +141,6 @@ const DetailsScreen1_3 = () => {
 
 const DetailsScreen1_4 = () => {
   const [pdfUri, setPdfUri] = useState(null);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const asset = Asset.fromModule(require('../assets/pdfs/lesson1_2.pdf'));
-        await asset.downloadAsync();
-        setPdfUri(asset.uri || asset.localUri);
-      } catch (e) {
-        console.error(e);
-      }
-    })();
-  }, []);
-
-  if (!pdfUri) {
-    return (
-      <View style={styles.loader}>
-        <ActivityIndicator size="large" color="#0000ff" />
-      </View>
-    );
-  }
 
   const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
 
@@ -303,72 +243,108 @@ const DetailsScreen2 = () => {
 };
 
 const DetailsScreen2_1 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1cyPPntK2NNit4SOipEYhnJW_cf3vSUdp/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
 const DetailsScreen2_2 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1j9U1-eg3P91fVujiMTU6EDcCR88RaIJU/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
+
 const DetailsScreen2_3 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1xpJ7BLOWyIqqIV0-roai-QzRiUOnR0w0/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
 const DetailsScreen2_4 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1sK0RGc1SCLVSqvtSJKu22cxycWSZ5_wa/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
 const DetailsScreen2_5 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1zm_pmZX24wD9NrP5X-UZJhTn31fgHLVs/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
@@ -441,58 +417,86 @@ const DetailsScreen3 = () => {
 };
 
 const DetailsScreen3_1 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1EOnEl4c_EGZkT2nURpzkfkCuj_fp-0ja/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
 const DetailsScreen3_2 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1tOK-nD_bNUSlYnyis08maoJFdRxIQ_ax/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
 const DetailsScreen3_3 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1Q4A1ouP1tDkaB82_4TQljBvHhbuxlWEU/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
 const DetailsScreen3_4 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1gMNOoquXk-oLotQ0gH2XpySHyg0hdMVA/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
@@ -565,58 +569,86 @@ const DetailsScreen4 = () => {
 };
 
 const DetailsScreen4_1 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1vwuampTEEhPSJJ0iWnzOkFZOc3n3KCgV/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
 const DetailsScreen4_2 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1emMZAN8y--pZB5zb5S6La8QPpHw8oGxL/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
 const DetailsScreen4_3 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1FIVEfwErbl479wQJF4aoUBTt25NefADe/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
 const DetailsScreen4_4 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1lKwDKJkSQpcEchBDjdicDfg6TXOiDGae/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
@@ -661,30 +693,44 @@ const DetailsScreen5 = () => {
 };
 
 const DetailsScreen5_1 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/1-Uoj2IhAuUtQM-zdMzzEVA7deg13Cl5k/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
 const DetailsScreen5_2 = () => {
-  const navigation = useNavigation();
+  const [pdfUri, setPdfUri] = useState(null);
+
+  const publicPdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+
+  const googleDocsUrl = `https://drive.google.com/file/d/107CqYPY1oETdxhTbrEx5rm0hP0quv546/view?usp=drive_link`;
+
   return (
-    <ScrollView style={{ flex: 1, position: 'relative',backgroundColor: '#fff',}}>
-    
     <View style={styles.container}>
-
-    
-
+      <WebView
+        source={{ uri: googleDocsUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        renderLoading={() => (
+          <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
+        )}
+      />
     </View>
-    </ScrollView>
   );
 };
 
