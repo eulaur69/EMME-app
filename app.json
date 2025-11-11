@@ -12,6 +12,7 @@
       "supportsTablet": true
     },
     "android": {
+      "versionCode": 7,
       "compileSdkVersion": 35,
       "targetSdkVersion": 35,
       "adaptiveIcon": {
