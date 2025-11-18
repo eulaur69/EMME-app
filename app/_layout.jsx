@@ -1208,7 +1208,7 @@ const HomeScreen = () => {
           </TouchableOpacity>
         </View>
 
-        <View style={{ paddingBottom: "10" }}></View>
+        <View style={{ paddingBottom: "50" }}></View>
       </ScrollView>
     </SafeAreaProvider>
   );
