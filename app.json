@@ -17,7 +17,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.EMME"
+      "package": "com.eulaur.EMME"
     },
     "web": {
       "bundler": "metro",
