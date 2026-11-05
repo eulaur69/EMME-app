@@ -1234,7 +1234,6 @@ const TabNavigator = () => {
         headerShown: true,
         headerStyle: {
           backgroundColor: "#fff",
-          elevation: 0,
           shadowColor: "#000",
           shadowOffset: { width: 0, height: 2 },
           shadowOpacity: 0.2,
