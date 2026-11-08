@@ -4,10 +4,9 @@
     "slug": "EMME",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/emmeLogo.jpg",
+    "icon": "./assets/images/emmeLogo.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
@@ -47,7 +46,9 @@
       ],
       "expo-asset",
       "expo-font",
-      "expo-web-browser"
+      "expo-web-browser",
+      "expo-status-bar",
+      "expo-sharing"
     ],
     "experiments": {
       "typedRoutes": true
