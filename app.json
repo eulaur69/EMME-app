@@ -4,7 +4,7 @@
     "slug": "EMME",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/emmeLogo.jpg",
+    "icon": "./assets/images/emmeLogo.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -14,7 +14,7 @@
     "android": {
       "versionCode": 24,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/emmeLogo.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.anonymous.EMME"
