@@ -1218,7 +1218,7 @@ const HeaderText = () => {
   return (
     <View style={{ flexDirection: "row", alignItems: "center" }}>
       <Image
-        source={require("../assets/images/emmeLogo.jpg")}
+        source={require("../assets/images/emmeLogo.png")}
         resizeMode="cover"
         style={{ width: 30, height: 30, marginRight: 8 }}
       />
